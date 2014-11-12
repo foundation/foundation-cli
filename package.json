@@ -9,12 +9,14 @@
     "exec": "^0.1.2",
     "insight": "^0.4.3",
     "multiline": "^1.0.1",
-    "nodegit": "^0.1.4",
     "nopt": "^3.0.1",
     "update-notifier": "^0.2.2"
   },
   "scripts": {
     "test": "./cli.js"
+  },
+  "bin": {
+    "fndtn": "./cli.js"
   },
   "author": "ZURB",
   "license": "MIT",
