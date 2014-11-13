@@ -10,6 +10,7 @@
     "insight": "^0.4.3",
     "multiline": "^1.0.1",
     "nopt": "^3.0.1",
+    "open": "0.0.5",
     "update-notifier": "^0.2.2"
   },
   "scripts": {
