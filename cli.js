@@ -22,12 +22,12 @@ if (typeof cmd.args[0] === 'undefined') {
     process.stdout.write("Foundation CLI version " + require('./package.json').version + '\n');
   }
   else {
-    foundation.help([]);
+    foundation.help();
   }
 }
 else {
   if (typeof foundation[cmd.args[0]] == 'undefined') {
-    console.error("That ain't a command.");
+    foundation.help();
   }
   else {
     foundation[cmd.args[0]](cmd.args.slice(1), cmd.opts);
