@@ -25,6 +25,13 @@ var cmd = {
   opts: parsed
 }
 
+// Check for updates once a day
+var notifier = update({
+  packageName: pkg.name,
+  packageVersion: pkg.version
+});
+notifier.notify();
+
 // No other arguments given
 if (typeof cmd.args[0] === 'undefined') {
   // If -v or --version was passed, show the version of the CLI
@@ -50,10 +57,3 @@ else {
     foundation[cmd.args[0]](cmd.args.slice(1), cmd.opts);
   }
 }
-
-var notifier = update({
-  packageName: pkg.name,
-  packageVersion: pkg.version
-});
-
-notifier.notify();
