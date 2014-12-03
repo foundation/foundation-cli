@@ -1,44 +1,83 @@
 # Foundation CLI
 
-This is the future CLI for the Foundation family of frameworks.
+This is the command-line interface for Foundation for Apps. It downloads our [template stack](https://github.com/zurb/foundation-apps-template) and installs the dependencies.
 
-The main goal for this tool should be to *reduce the number of dependencies required when starting a Foundation project*. Right now Foundation 5 has five requirements, or six if using the libsass stack. It's something people complain about here and there. For these tools, the only dependency should be Node, or Node and Ruby with Foundation for Sites.
+## Requirements
 
-Here's how we condense dependencies:
- - Use libgit2 (via `nodegit`) to clone library files. This prevents the user from needing a copy of git installed beforehand.
- - Run Bower, Gulp, and Grunt using a local package instead of a global one. This skips the `npm install -g bower grunt-cli` step in the setup process.
- - Ruby will still be required for Sites, if the user is on the Compass stack. There's probably no easy way to make Ruby portable. There are some solutions, like [Ruby Ship](https://github.com/stephan-nordnes-eriksen/ruby_ship), but it adds 80MB to the download, and also most people in web development have Ruby on their machine already. This would mostly benefit Windows users anyway.
- - Ink's inliner would need to be rewritten in JavaScript, so it can be run on the user's machine. There's a Node tool called [Juice](https://github.com/Automattic/juice) that could get us most of the way there.
+You'll need the following software installed to get started.
 
-## How to mess with this
+  * [Node.js](http://nodejs.org): Use the installer provided on the NodeJS website.
+    * With Node installed, run `[sudo] npm install -g gulp bower`.
+  * [Git](http://git-scm.com/downloads): Use the installer for your OS.
+    * Windows users can also try [Git for Windows](http://git-for-windows.github.io/).
+  * [Ruby](https://www.ruby-lang.org/en/): Use the installer for your OS. For Windows users, [JRuby](http://jruby.org/) is a popular alternative.
+    * With Ruby installed, run `gem install bundler`.
 
-Right now this is just a proof-of-concept, so all it does is set up Foundation for Apps for you.
+## Installing
+
+The Foundation CLI is installed through npm. You also need `bower` on your system to install software.
 
 ```bash
-git clone https://github.com/zurb/foundation-cli.git
-cd foundation-cli
-npm test [name]
+npm install -g foundation-cli bower
 ```
 
-The CLI will create a new folder called whatever you put for `[name]`, and download and set up Foundation for Apps. It *does* require git to be installed globally, for now.
+This will add the `foundation-apps` command to your system.
 
-## Foundation for Apps process
+## Commands
 
-1. Clone the Angular stack from GitHub using libit2
-2. Install dependencies with a local copy of Bower
-3. Run stack using local copy of Gulp
+### New
 
-## Foundation for Sites process
+Downloads and installs a Foundation for Apps project, with the folder name you specify.
 
-1. Clone the Compass or libsass stack from GitHub using libgit2
-2. Install dependencies with a local copy of Bower
-3. Run stack using global Ruby, or local Grunt
+```bash
+foundation-apps new appName
+```
 
-## Foundation for Email process
+You can optionally specify a specific version of the framework to use.
 
-1. Clone a stock Ink project from GitHub using libgit2
-  - Maybe also allow for the user to download templates with it?
-2. Run inliner to generate a production-ready email
+```bash
+foundation-apps new appName -v 1.0.0
 
-> Any application that *can* be written in JavaScript, *will* eventually be written in JavaScript.
-[Jeff Atwood](any application that can be written in JavaScript, will eventually be written in JavaScript.), founder of StackOverflow
+Once the stack is done installing, navigate into the folder:
+
+```bash
+cd appName
+```
+
+Now use the template's build-in Node command to assemble your app and run a test server.
+
+```bash
+npm start
+```
+
+While this process is running, you can view the assembled app in your browser, at this URL:
+
+```
+http://localhost:8080
+```
+
+### Update
+
+Updates your Bower packages, which includes Foundation for Apps. Run this command when you want to update an existing project to the newest version of Foundation.
+
+```bash
+foundation-apps update
+```
+
+### Watch
+
+### Build
+
+### Help
+
+Lists all available commands in the CLI.
+
+```bash
+foundation-apps help
+```
+
+Add a command name at the end to learn how a specific command works.
+
+```bash
+foundation-apps help new
+```

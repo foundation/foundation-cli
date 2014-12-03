@@ -1,6 +1,6 @@
 {
   "name": "zurb-foundation",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Command-line interface for Foundation for Apps.",
   "main": "./bin/cli.js",
   "dependencies": {
@@ -18,9 +18,8 @@
     "test": "./bin/cli.js new test"
   },
   "bin": {
-    "fndtn": "./bin/cli.js"
+    "foundation-apps": "./bin/cli.js"
   },
   "author": "ZURB",
-  "license": "MIT",
-  "private": true
+  "license": "MIT"
 }

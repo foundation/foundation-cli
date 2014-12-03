@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 var nopt       = require('nopt');
+var update     = require('update-notifier');
+var pkg        = require('../package.json');
 var foundation = require('../lib/foundationCLI');
 
 // Options that can be passed to commands
@@ -48,3 +50,10 @@ else {
     foundation[cmd.args[0]](cmd.args.slice(1), cmd.opts);
   }
 }
+
+var notifier = update({
+  packageName: pkg.name,
+  packageVersion: pkg.version
+});
+
+notifier.notify();
