@@ -37,6 +37,7 @@ You can optionally specify a specific version of the framework to use.
 
 ```bash
 foundation-apps new appName -v 1.0.0
+```
 
 Once the stack is done installing, navigate into the folder:
 
