@@ -11,7 +11,10 @@
     "multiline": "^1.0.1",
     "nopt": "^3.0.1",
     "open": "0.0.5",
+    "q": "^1.1.2",
     "rimraf": "^2.2.8",
+    "single-line-log": "^0.4.1",
+    "string-length": "^1.0.0",
     "update-notifier": "^0.2.2"
   },
   "scripts": {
