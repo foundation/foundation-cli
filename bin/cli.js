@@ -36,7 +36,7 @@ notifier.notify();
 if (typeof cmd.args[0] === 'undefined') {
   // If -v or --version was passed, show the version of the CLI
   if (typeof cmd.opts.version !== 'undefined') {
-    process.stdout.write("Foundation CLI version " + require('./package.json').version + '\n');
+    process.stdout.write("Foundation CLI version " + require('../package.json').version + '\n');
   }
   // Otherwise, just show the help screen
   else {
