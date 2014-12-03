@@ -1,5 +1,5 @@
 {
-  "name": "zurb-foundation",
+  "name": "foundation-cli",
   "version": "0.1.0",
   "description": "Command-line interface for Foundation for Apps.",
   "main": "./bin/cli.js",
