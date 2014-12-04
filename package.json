@@ -16,7 +16,7 @@
     "update-notifier": "^0.2.2"
   },
   "scripts": {
-    "postinstall": "./lib/welcome.js",
+    "postinstall": "node lib/welcome.js",
     "test": "./bin/cli.js new test"
   },
   "bin": {
