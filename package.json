@@ -14,7 +14,8 @@
     "rimraf": "^2.2.8",
     "single-line-log": "^0.4.1",
     "string-length": "^1.0.0",
-    "update-notifier": "^0.2.2"
+    "update-notifier": "^0.2.2",
+    "which": "^1.0.8"
   },
   "scripts": {
     "postinstall": "node lib/welcome.js",
