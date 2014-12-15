@@ -31,6 +31,12 @@ The CLI periodically gets updates that add features or fix bugs. Use npm to upgr
 npm update -g foundation-cli
 ```
 
+To check what version you currently have, use `-v`.
+
+```bash
+foundation-apps -v
+```
+
 ## Commands
 
 ### New
