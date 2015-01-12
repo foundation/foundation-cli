@@ -13,7 +13,6 @@
     "npm": "^2.1.12",
     "open": "0.0.5",
     "rimraf": "^2.2.8",
-    "single-line-log": "^0.4.1",
     "string-length": "^1.0.0",
     "update-notifier": "^0.2.2",
     "which": "^1.0.8"
