@@ -2,7 +2,11 @@
   "name": "foundation-cli",
   "version": "1.0.4",
   "description": "Command-line interface for Foundation for Apps.",
-  "main": "./bin/cli.js",
+  "author": "ZURB",
+  "main": "lib/index.js",
+  "bin": {
+    "foundation-apps": "./bin/cli.js"
+  },
   "dependencies": {
     "bower": "^1.3.12",
     "colors": "^1.0.3",
@@ -16,13 +20,17 @@
     "update-notifier": "^0.2.2",
     "which": "^1.0.8"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zurb/foundation-cli"
+  },
+  "bugs": {
+    "url": "https://github.com/zurb/foundation-cli/issues"
+  },
   "scripts": {
     "postinstall": "node lib/welcome.js",
     "test": "./bin/cli.js new test"
   },
-  "bin": {
-    "foundation-apps": "./bin/cli.js"
-  },
-  "author": "ZURB",
+  "preferGlobal": true,
   "license": "MIT"
 }
