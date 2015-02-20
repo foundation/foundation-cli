@@ -10,8 +10,8 @@ var foundation = require('../lib');
 // new --version x.x.x will specify a version of Foundation for Apps to use
 // --version will show the version of the CLI
 var options = {
-  "libsass": Boolean,
-  "version": String
+  "version": String,
+  "edge": Boolean
 }
 // -v is a shorthand for --version
 var shorthands = {
@@ -52,8 +52,7 @@ else {
   // Otherwise, just run it already!
   else {
     // Every command function is passed secondary commands, and options
-    // So if the user types "foundation new myApp --libsass", "myApp" is a secondary command,
-    // and "--libsass" is an option
+    // So if the user types "foundation new myApp --edge", "myApp" is a secondary command, and "--edge" is an option
     foundation[cmd.args[0]](cmd.args.slice(1), cmd.opts);
   }
 }
