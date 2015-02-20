@@ -30,7 +30,7 @@
   },
   "scripts": {
     "postinstall": "node lib/welcome.js",
-    "test": "./bin/cli.js new test"
+    "test": "node bin/cli.js new test"
   },
   "preferGlobal": true,
   "license": "MIT"
