@@ -3,7 +3,7 @@
 var nopt       = require('nopt');
 var update     = require('update-notifier');
 var pkg        = require('../package.json');
-var foundation = require('../lib/foundationCLI');
+var foundation = require('../lib');
 
 // Options that can be passed to commands
 // new --libsass will switch to the libsass compiler
