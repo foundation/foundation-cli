@@ -6,8 +6,8 @@ var pkg        = require('../package.json');
 var foundation = require('../lib');
 
 // Options that can be passed to commands
-// new --libsass will switch to the libsass compiler
 // new --version x.x.x will specify a version of Foundation for Apps to use
+// new --edge will use the master branch of the framework
 // --version will show the version of the CLI
 var options = {
   "version": String,
@@ -17,7 +17,8 @@ var options = {
 var shorthands = {
   "v": "version"
 }
-var parsed = nopt(options);
+var parsed = nopt(options, shorthands);
+
 // cmd.args contains basic commands like "new" and "help"
 // cmd.opts contains options, like --libsass and --version
 var cmd = {
