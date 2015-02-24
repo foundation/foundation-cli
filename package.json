@@ -31,8 +31,11 @@
   },
   "scripts": {
     "postinstall": "node lib/welcome.js",
-    "test": "node bin/cli.js new test"
+    "test": "node bin/cli.js new test --debug"
   },
   "preferGlobal": true,
+  "engines": {
+    "node": ">=0.10.33"
+  },
   "license": "MIT"
 }
