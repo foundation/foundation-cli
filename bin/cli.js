@@ -11,7 +11,8 @@ var foundation = require('../lib');
 // --version will show the version of the CLI
 var options = {
   "version": String,
-  "edge": Boolean
+  "edge": Boolean,
+  "debug": Boolean
 }
 // -v is a shorthand for --version
 var shorthands = {
