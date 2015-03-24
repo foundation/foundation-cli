@@ -10,8 +10,6 @@ You'll need the following software installed to get started.
     * With Node installed, run `[sudo] npm install -g gulp bower`.
   * [Git](http://git-scm.com/downloads): Use the installer for your OS.
     * Windows users can also try [Git for Windows](http://git-for-windows.github.io/).
-  * [Ruby](https://www.ruby-lang.org/en/): Use the installer for your OS. For Windows users, [JRuby](http://jruby.org/) is a popular alternative.
-    * With Ruby installed, run `gem install bundler`.
 
 ## Installing
 
@@ -47,6 +45,18 @@ Downloads and installs a Foundation for Apps project, with the folder name you s
 foundation-apps new appName
 ```
 
+You can specify a particular version of the framework to use with the `-v` flag.
+
+```bash
+foundation-apps new appName -v 1.0.0
+```
+
+For the adventurous, you can check out the latest (and possibly unstable!) build of the framework with the `--edge` flag.
+
+```bash
+foundation-apps new appName --edge
+```
+
 ### Watch
 
 While inside of your app's folder, use the `watch` command to assemble your app and run a test server.
@@ -78,6 +88,14 @@ Updates your Bower packages, which includes Foundation for Apps. Run this comman
 
 ```bash
 foundation-apps update
+```
+
+### Docs
+
+Opens the [Foundation for Apps documentation](http://foundation.zurb.com/apps/docs).
+
+```bash
+foundation-apps docs
 ```
 
 ### Help
