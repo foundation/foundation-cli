@@ -16,7 +16,7 @@ var options = {
 }
 // -v is a shorthand for --version
 var shorthands = {
-  "v": "version"
+  "v": "--version"
 }
 var parsed = nopt(options, shorthands);
 
