@@ -35,6 +35,20 @@ describe('FoundationCLI', function() {
     });
   });
 
+  it('should display help if no commands are given', function(done) {
+    runCLI('', function(output) {
+      assert.ok(output.indexOf('Commands:') > -1);
+      done();
+    });
+  });
+
+  it('should display help if a command does not exist', function(done) {
+    runCLI('notathing', function(output) {
+      assert.ok(output.indexOf('Commands:') > -1);
+      done()
+    });
+  });
+
   describe('#new()', function() {
     before(function(done) {
       this.timeout(0);
@@ -73,7 +87,7 @@ describe('FoundationCLI', function() {
       });
     });
 
-    it('should change the version number of a project', function(done) {
+    it('should change the version number of a project with --version', function(done) {
       this.timeout(0);
 
       runCLI('new testVersion --version 1.0.0', function(output) {
@@ -83,7 +97,7 @@ describe('FoundationCLI', function() {
       });
     });
 
-    it('should use the master branch of the framework', function(done) {
+    it('should use the master branch of the framework with --version', function(done) {
       this.timeout(0);
 
       runCLI('new testEdge --edge', function(output) {
@@ -128,7 +142,7 @@ describe('FoundationCLI', function() {
       rimraf('testExists');
       rimraf('testVersion');
       rimraf('testEdge');
-      
+
       done();
     });
   });
