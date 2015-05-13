@@ -1,6 +1,6 @@
 # Foundation CLI
 
-This is the command-line interface for Foundation for Apps. It downloads our [template stack](https://github.com/zurb/foundation-apps-template) and installs the dependencies.
+This is the command-line interface for Foundation for Apps. It downloads our [template stack](https://github.com/zurb/foundation-template) and installs the dependencies.
 
 ## Requirements
 
@@ -19,7 +19,7 @@ The Foundation CLI is installed through npm.
 npm install -g foundation-cli
 ```
 
-This will add the `foundation-apps` command to your system.
+This will add the `foundation` command to your system.
 
 ### Updating
 
@@ -32,7 +32,7 @@ npm update -g foundation-cli
 To check what version you currently have, use `-v`.
 
 ```bash
-foundation-apps -v
+foundation -v
 ```
 
 ## Commands
@@ -42,19 +42,19 @@ foundation-apps -v
 Downloads and installs a Foundation for Apps project, with the folder name you specify.
 
 ```bash
-foundation-apps new appName
+foundation new appName
 ```
 
 You can specify a particular version of the framework to use with the `-v` flag.
 
 ```bash
-foundation-apps new appName -v 1.0.0
+foundation new appName -v 1.0.0
 ```
 
 For the adventurous, you can check out the latest (and possibly unstable!) build of the framework with the `--edge` flag.
 
 ```bash
-foundation-apps new appName --edge
+foundation new appName --edge
 ```
 
 ### Watch
@@ -63,7 +63,7 @@ While inside of your app's folder, use the `watch` command to assemble your app 
 
 ```bash
 cd appName
-foundation-apps watch
+foundation watch
 ```
 
 While this process is running, you can view the assembled app in your browser, at this URL:
@@ -79,7 +79,7 @@ While the server is running, any changes you make to your HTML, Sass, or JavaScr
 To build an app once, without running a server or watching for new changes, use the `build` command.
 
 ```bash
-foundation-apps build
+foundation build
 ```
 
 ### Update
@@ -87,7 +87,7 @@ foundation-apps build
 Updates your Bower packages, which includes Foundation for Apps. Run this command when you want to update an existing project to the newest version of Foundation.
 
 ```bash
-foundation-apps update
+foundation update
 ```
 
 ### Docs
@@ -95,7 +95,7 @@ foundation-apps update
 Opens the [Foundation for Apps documentation](http://foundation.zurb.com/apps/docs).
 
 ```bash
-foundation-apps docs
+foundation docs
 ```
 
 ### Help
@@ -103,11 +103,11 @@ foundation-apps docs
 Lists all available commands in the CLI.
 
 ```bash
-foundation-apps help
+foundation help
 ```
 
 Add a command name at the end to learn how a specific command works.
 
 ```bash
-foundation-apps help new
+foundation help new
 ```

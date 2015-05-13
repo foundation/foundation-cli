@@ -5,7 +5,7 @@
   "author": "ZURB",
   "main": "lib/index.js",
   "bin": {
-    "foundation-apps": "./bin/cli.js"
+    "foundation": "./bin/cli.js"
   },
   "dependencies": {
     "async": "^0.9.0",
