@@ -6,18 +6,25 @@ var pkg        = require('../package.json');
 var foundation = require('../lib');
 
 // Options that can be passed to commands
-// new --version x.x.x will specify a version of Foundation for Apps to use
-// new --edge will use the master branch of the framework
-// --version will show the version of the CLI
 var options = {
   "version": String,
   "edge": Boolean,
-  "debug": Boolean
+  "debug": Boolean,
+  "framework": String,
+  "name": String,
+  "template": Boolean
 }
-// -v is a shorthand for --version
+
+// Shorthands for the above commands
 var shorthands = {
-  "v": "--version"
+  "v": "--version",
+  "e": "--edge",
+  "d": "--debug",
+  "f": "--framework",
+  "n": "--name",
+  "t": "--template"
 }
+
 var parsed = nopt(options, shorthands);
 
 // cmd.args contains basic commands like "new" and "help"
