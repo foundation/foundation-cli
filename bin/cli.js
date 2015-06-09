@@ -12,7 +12,8 @@ var options = {
   "debug": Boolean,
   "framework": String,
   "name": String,
-  "template": Boolean
+  "template": Boolean,
+  "directory": String
 }
 
 // Shorthands for the above commands
@@ -22,7 +23,8 @@ var shorthands = {
   "d": "--debug",
   "f": "--framework",
   "n": "--name",
-  "t": "--template"
+  "t": "--template",
+  "p": "--directory"
 }
 
 var parsed = nopt(options, shorthands);
@@ -52,6 +54,7 @@ if (typeof cmd.args[0] === 'undefined') {
     foundation.help();
   }
 }
+
 // Arguments given
 else {
   // If the command typed in doesn't exist, show the help screen
