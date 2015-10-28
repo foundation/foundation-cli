@@ -39,22 +39,10 @@ foundation -v
 
 ### New
 
-Downloads and installs a Foundation for Apps project, with the folder name you specify.
+Starts the setup process for a new Foundation project. The CLI will ask you which framework you want to use and a folder name for the project.
 
 ```bash
-foundation new appName
-```
-
-You can specify a particular version of the framework to use with the `-v` flag.
-
-```bash
-foundation new appName -v 1.0.0
-```
-
-For the adventurous, you can check out the latest (and possibly unstable!) build of the framework with the `--edge` flag.
-
-```bash
-foundation new appName --edge
+foundation new
 ```
 
 ### Watch
@@ -88,14 +76,6 @@ Updates your Bower packages, which includes Foundation for Apps. Run this comman
 
 ```bash
 foundation update
-```
-
-### Docs
-
-Opens the [Foundation for Apps documentation](http://foundation.zurb.com/apps/docs).
-
-```bash
-foundation docs
 ```
 
 ### Help
