@@ -12,7 +12,7 @@ var options = {
   "debug": Boolean,
   "framework": String,
   "name": String,
-  "template": Boolean,
+  "template": String,
   "directory": String
 }
 
