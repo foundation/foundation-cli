@@ -2,7 +2,12 @@
   "name": "foundation-cli",
   "version": "2.0.0-beta.4",
   "description": "Command-line interface for Foundation for Apps.",
-  "author": "ZURB",
+  "keywords": [
+    "foundation",
+    "cli",
+    "scaffold"
+  ],
+  "author": "ZURB <foundation@zurb.com> (http://zurb.com)",
   "main": "lib/index.js",
   "bin": {
     "foundation": "./bin/cli.js"
@@ -18,13 +23,14 @@
     "nopt": "^3.0.1",
     "npm": "^2.1.12",
     "open": "0.0.5",
-    "paint-by-number": "git://github.com/gakimball/paint-by-number.git",
+    "paint-by-number": "1.0.0",
     "rimraf": "^2.2.8",
     "semver": "^4.3.0",
     "string-length": "^1.0.0",
     "update-notifier": "^0.2.2",
     "which": "^1.0.8"
   },
+  "homepage": "http://foundation.zurb.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/zurb/foundation-cli"
