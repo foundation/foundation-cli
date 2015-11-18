@@ -1,6 +1,6 @@
 {
   "name": "foundation-cli",
-  "version": "2.0.0-beta.4",
+  "version": "2.0.0",
   "description": "Command-line interface for Foundation for Apps.",
   "keywords": [
     "foundation",
