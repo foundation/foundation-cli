@@ -1,6 +1,10 @@
 # Foundation CLI
 
-This is the command-line interface for Foundation for Apps. It downloads our [template stack](https://github.com/zurb/foundation-template) and installs the dependencies.
+This is the command-line interface for [Foundation](http://foundation.zurb.com) family of frameworks.. It downloads and installs blank templates in any of the three Foundation frameworks:
+
+- [Foundation for Sites](http://foundation.zurb.com/sites), a framework for responsive websites.
+- [Foundation for Apps](http://foundation.zurb.com/apps), a framework for responsive web apps.
+- [Foundation for Emails](http://foundation.zurb.com/emails), a framework for responsive email.
 
 ## Requirements
 
@@ -64,7 +68,7 @@ While the server is running, any changes you make to your HTML, Sass, or JavaScr
 
 ### Build
 
-To build an app once, without running a server or watching for new changes, use the `build` command.
+To build your app for production, use `foundation build`.
 
 ```bash
 foundation build
@@ -72,7 +76,7 @@ foundation build
 
 ### Update
 
-Updates your Bower packages, which includes Foundation for Apps. Run this command when you want to update an existing project to the newest version of Foundation.
+Updates your Bower packages, which includes Foundation. Run this command when you want to update an existing project to the newest version of Foundation.
 
 ```bash
 foundation update
