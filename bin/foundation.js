@@ -7,24 +7,20 @@ var foundation = require('../lib');
 
 // Options that can be passed to commands
 var options = {
-  "version": String,
-  "edge": Boolean,
-  "debug": Boolean,
+  // "version": String,
+  // "edge": Boolean,
   "framework": String,
-  "name": String,
   "template": String,
   "directory": String
 }
 
 // Shorthands for the above commands
 var shorthands = {
-  "v": "--version",
-  "e": "--edge",
-  "d": "--debug",
+  // "v": "--version",
+  // "e": "--edge",
   "f": "--framework",
-  "n": "--name",
   "t": "--template",
-  "p": "--directory"
+  "d": "--directory"
 }
 
 var parsed = nopt(options, shorthands);
