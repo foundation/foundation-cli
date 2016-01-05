@@ -7,8 +7,6 @@ var foundation = require('../lib');
 
 // Options that can be passed to commands
 var options = {
-  // "version": String,
-  // "edge": Boolean,
   "framework": String,
   "template": String,
   "directory": String
@@ -16,8 +14,7 @@ var options = {
 
 // Shorthands for the above commands
 var shorthands = {
-  // "v": "--version",
-  // "e": "--edge",
+  "v": "--version",
   "f": "--framework",
   "t": "--template",
   "d": "--directory"
