@@ -37,7 +37,7 @@
     "url": "https://github.com/zurb/foundation-cli/issues"
   },
   "scripts": {
-    "test": "node bin/cli.js new"
+    "test": "node bin/foundation.js new"
   },
   "preferGlobal": true,
   "engines": {
