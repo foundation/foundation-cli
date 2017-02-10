@@ -1,6 +1,6 @@
-# Foundation CLI
+# TBG Foundation CLI
 
-This is the command-line interface for [Foundation](http://foundation.zurb.com) family of frameworks.. It downloads and installs blank templates in any of the three Foundation frameworks:
+This is a fork of the command-line interface for [Foundation](http://foundation.zurb.com) family of frameworks for use with internal TBG projects. It downloads and installs blank templates in any of the three Foundation frameworks:
 
 - [Foundation for Sites](http://foundation.zurb.com/sites), a framework for responsive websites.
 - [Foundation for Apps](http://foundation.zurb.com/apps), a framework for responsive web apps.
@@ -20,23 +20,23 @@ You'll need the following software installed to get started.
 The Foundation CLI is installed through npm.
 
 ```bash
-npm install -g foundation-cli
+npm install -g tbg-foundation-cli
 ```
 
-This will add the `foundation` command to your system.
+This will add the `tbg-foundation` command to your system.
 
 ### Updating
 
 The CLI periodically gets updates that add features or fix bugs. Use npm to upgrade the CLI to the newest version.
 
 ```bash
-npm update -g foundation-cli
+npm update -g tbg-foundation-cli
 ```
 
 To check what version you currently have, use `-v`.
 
 ```bash
-foundation -v
+tbg-foundation -v
 ```
 
 ## Commands
@@ -46,7 +46,7 @@ foundation -v
 Starts the setup process for a new Foundation project. The CLI will ask you which framework you want to use and a folder name for the project.
 
 ```bash
-foundation new
+tbg-foundation new
 ```
 
 ### Watch
@@ -55,7 +55,7 @@ While inside of your app's folder, use the `watch` command to assemble your app 
 
 ```bash
 cd appName
-foundation watch
+tbg-foundation watch
 ```
 
 While this process is running, you can view the assembled app in your browser, at this URL:
@@ -71,7 +71,7 @@ While the server is running, any changes you make to your HTML, Sass, or JavaScr
 To build your app for production, use `foundation build`.
 
 ```bash
-foundation build
+tbg-foundation build
 ```
 
 ### Update
@@ -79,7 +79,7 @@ foundation build
 Updates your Bower packages, which includes Foundation. Run this command when you want to update an existing project to the newest version of Foundation.
 
 ```bash
-foundation update
+tbg-foundation update
 ```
 
 ### Help
@@ -87,11 +87,11 @@ foundation update
 Lists all available commands in the CLI.
 
 ```bash
-foundation help
+tbg-foundation help
 ```
 
 Add a command name at the end to learn how a specific command works.
 
 ```bash
-foundation help new
+tbg-foundation help new
 ```

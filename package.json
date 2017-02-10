@@ -1,16 +1,19 @@
 {
-  "name": "foundation-cli",
+  "name": "tbg-foundation-cli",
   "version": "2.1.0",
-  "description": "Command-line interface for the Foundation family of frameworks.",
+  "description": "TBG fork of the command-line interface for the Foundation family of frameworks",
   "keywords": [
     "foundation",
     "cli",
     "scaffold"
   ],
   "author": "ZURB <foundation@zurb.com> (http://zurb.com)",
+  "contributors": [
+    "The Berndt Group <tyler.madsen@berndtgroup.net> (http://berndtgroup.net)"
+  ],
   "main": "lib/index.js",
   "bin": {
-    "foundation": "./bin/foundation.js"
+    "tbg-foundation": "./bin/foundation.js"
   },
   "dependencies": {
     "async": "^0.9.0",
