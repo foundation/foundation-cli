@@ -1,6 +1,12 @@
-# TBG Foundation CLI
+## The Berndt Group's Foundation Fork
 
-This is a fork of the command-line interface for [Foundation](http://foundation.zurb.com) family of frameworks for use with internal TBG projects. It downloads and installs blank templates in any of the three Foundation frameworks:
+This is a fork of the command-line interface for Foundation, for use with [TBG-foundation-sites](https://github.com/BerndtGroup/TBG-foundation-sites) and the [TBG-foundation-template](https://github.com/BerndtGroup/TBG-foundation-template).
+
+The only difference in what follows is that the `tbg-foundation-cli` npm package should be used, which provides the `tbg-foundation` command.
+
+# Foundation CLI
+
+This is the command-line interface for [Foundation](http://foundation.zurb.com) family of frameworks for use with internal TBG projects. It downloads and installs blank templates in any of the three Foundation frameworks:
 
 - [Foundation for Sites](http://foundation.zurb.com/sites), a framework for responsive websites.
 - [Foundation for Apps](http://foundation.zurb.com/apps), a framework for responsive web apps.
@@ -20,23 +26,23 @@ You'll need the following software installed to get started.
 The Foundation CLI is installed through npm.
 
 ```bash
-npm install -g tbg-foundation-cli
+npm install -g foundation-cli
 ```
 
-This will add the `tbg-foundation` command to your system.
+This will add the `foundation` command to your system.
 
 ### Updating
 
 The CLI periodically gets updates that add features or fix bugs. Use npm to upgrade the CLI to the newest version.
 
 ```bash
-npm update -g tbg-foundation-cli
+npm update -g foundation-cli
 ```
 
 To check what version you currently have, use `-v`.
 
 ```bash
-tbg-foundation -v
+foundation -v
 ```
 
 ## Commands
@@ -46,7 +52,7 @@ tbg-foundation -v
 Starts the setup process for a new Foundation project. The CLI will ask you which framework you want to use and a folder name for the project.
 
 ```bash
-tbg-foundation new
+foundation new
 ```
 
 ### Watch
@@ -55,7 +61,7 @@ While inside of your app's folder, use the `watch` command to assemble your app 
 
 ```bash
 cd appName
-tbg-foundation watch
+foundation watch
 ```
 
 While this process is running, you can view the assembled app in your browser, at this URL:
@@ -71,7 +77,7 @@ While the server is running, any changes you make to your HTML, Sass, or JavaScr
 To build your app for production, use `foundation build`.
 
 ```bash
-tbg-foundation build
+foundation build
 ```
 
 ### Update
@@ -79,7 +85,7 @@ tbg-foundation build
 Updates your Bower packages, which includes Foundation. Run this command when you want to update an existing project to the newest version of Foundation.
 
 ```bash
-tbg-foundation update
+foundation update
 ```
 
 ### Help
@@ -87,11 +93,11 @@ tbg-foundation update
 Lists all available commands in the CLI.
 
 ```bash
-tbg-foundation help
+foundation help
 ```
 
 Add a command name at the end to learn how a specific command works.
 
 ```bash
-tbg-foundation help new
+foundation help new
 ```
