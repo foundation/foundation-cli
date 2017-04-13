@@ -1,6 +1,6 @@
 {
   "name": "foundation-cli",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Command-line interface for the Foundation family of frameworks.",
   "keywords": [
     "foundation",
