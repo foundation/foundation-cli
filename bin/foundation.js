@@ -11,7 +11,8 @@ var options = {
   "template": String,
   "directory": String
 }
-
+// var rr = foundation.responses;
+// console.log(rr('lol').errors.general);
 // Shorthands for the above commands
 var shorthands = {
   "v": "--version",
