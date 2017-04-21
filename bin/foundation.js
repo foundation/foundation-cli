@@ -7,59 +7,62 @@ var foundation = require('../lib');
 
 // Options that can be passed to commands
 var options = {
-  "framework": String,
-  "template": String,
-  "directory": String
+    "version": Boolean,
+    "framework": ['sites','apps','emails'],
+    "template": String,
+    "directory": String
 }
-// var rr = foundation.responses;
-// console.log(rr('lol').errors.general);
-// Shorthands for the above commands
+
+
 var shorthands = {
-  "v": "--version",
-  "f": "--framework",
-  "t": "--template",
-  "d": "--directory"
+    "v": "--version",
+    "f": "--framework",
+    "t": "--template",
+    "d": "--directory"
 }
 
 var parsed = nopt(options, shorthands);
-
 // cmd.args contains basic commands like "new" and "help"
 // cmd.opts contains options, like --libsass and --version
 var cmd = {
-  args: parsed.argv.remain,
-  opts: parsed
+    command: parsed.argv.remain,
+    opts: parsed
 }
+
+
 
 // Check for updates once a day
 var notifier = update({
-  packageName: pkg.name,
-  packageVersion: pkg.version
+    packageName: pkg.name,
+    packageVersion: pkg.version
 });
 notifier.notify();
 
-// No other arguments given
-if (typeof cmd.args[0] === 'undefined') {
-  // If -v or --version was passed, show the version of the CLI
-  if (typeof cmd.opts.version !== 'undefined') {
-    process.stdout.write("Foundation CLI version " + require('../package.json').version + '\n');
-  }
-  // Otherwise, just show the help screen
-  else {
-    foundation.help();
-  }
+// No commands issued.
+if (cmd.command.length === 0) {
+    // If -v or --version was passed, show the version of the CLI
+    if (cmd.opts.version) {
+        process.stdout.write("Foundation CLI version " + require('../package.json').version + '\n');
+    }
+    // Otherwise, just show the help screen
+    else {
+        foundation.help();
+    }
 }
 
-// Arguments given
+// Commands given
 else {
-  // If the command typed in doesn't exist, show the help screen
-    if (typeof foundation[cmd.args[0]] == 'undefined') {
-        console.log(cmd.args[0].red + " is not a defined command.");
-    foundation.help();
-  }
-  // Otherwise, just run it already!
-  else {
-    // Every command function is passed secondary commands, and options
-    // So if the user types "foundation new myApp --edge", "myApp" is a secondary command, and "--edge" is an option
-    foundation[cmd.args[0]](cmd.args.slice(1), cmd.opts);
-  }
+    // If the command typed in doesn't exist, show the help screen
+    if (!(cmd.command[0] in foundation)) {
+        console.log(cmd.command[0].red + " is not a defined command.");
+        foundation.help();
+    }
+    // Otherwise, just run it already!
+    else {
+        // Every command function is passed secondary commands, and options
+        // So if the user types "foundation new myApp --edge", "myApp" is a secondary command, and "--edge" is an option
+        // use loop in the future to handle multiple commands
+
+        foundation[cmd.command[0]](cmd.command.slice(1), cmd.opts);
+    }
 }
