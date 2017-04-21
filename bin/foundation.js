@@ -52,7 +52,8 @@ if (typeof cmd.args[0] === 'undefined') {
 // Arguments given
 else {
   // If the command typed in doesn't exist, show the help screen
-  if (typeof foundation[cmd.args[0]] == 'undefined') {
+    if (typeof foundation[cmd.args[0]] == 'undefined') {
+        console.log(cmd.args[0].red + " is not a defined command.");
     foundation.help();
   }
   // Otherwise, just run it already!
