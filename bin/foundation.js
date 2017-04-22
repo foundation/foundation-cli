@@ -9,7 +9,7 @@ var foundation = require('../lib');
 // Options that can be passed to commands
 var options = {
     "version": Boolean,
-    "framework": [String,'sites','apps','emails'],
+    "framework": String,
     "template": String,
     "directory": String
 }
@@ -29,6 +29,8 @@ var cmd = {
     command: parsed.argv.remain,
     opts: parsed
 }
+
+
 
 // Check for updates once a day
 var notifier = update({
@@ -50,20 +52,19 @@ if (cmd.command.length === 0) {
     }
 }
 
-// Commands given
+// Commands given (new, help, etc)
 else {
 
     // If the command typed in doesn't exist, show the help screen
     if (!(cmd.command[0] in foundation)) {
         foundation.converse(cmd.command[0].red + " is not a defined command.");
-       foundation.help(false);
+        foundation.help(false);
     }
     // Otherwise, just run it already!
     else {
         // Every command function is passed secondary commands, and options
         // So if the user types "foundation new myApp --edge", "myApp" is a secondary command, and "--edge" is an option
         // use loop in the future to handle multiple commands
-
         foundation[cmd.command[0]](cmd.command.slice(1), cmd.opts);
     }
 }
