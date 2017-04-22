@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+var term       = require('terminal-kit').terminal;
 var nopt       = require('nopt');
 var update     = require('update-notifier');
 var pkg        = require('../package.json');
@@ -44,7 +45,8 @@ notifier.notify();
 if (cmd.command.length === 0) {
     // If -v or --version was passed, show the version of the CLI
     if (cmd.opts.version) {
-        foundation.converse("Foundation CLI version " + require('../package.json').version);
+        say("Foundation CLI version " + require('../package.json').version);
+
     }
     // Otherwise, just show the help screen
     else {
@@ -57,7 +59,7 @@ else {
 
     // If the command typed in doesn't exist, show the help screen
     if (!(cmd.command[0] in foundation)) {
-        foundation.converse(cmd.command[0].red + " is not a defined command.");
+        term.red(cmd.command[0])(" is not a defined command.\n\n");
         foundation.help(false);
     }
     // Otherwise, just run it already!
