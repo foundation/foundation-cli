@@ -45,7 +45,7 @@ notifier.notify();
 if (cmd.command.length === 0) {
     // If -v or --version was passed, show the version of the CLI
     if (cmd.opts.version) {
-        say("Foundation CLI version " + require('../package.json').version);
+        term("Foundation CLI version " + require('../package.json').version + "\n");
 
     }
     // Otherwise, just show the help screen
@@ -56,7 +56,6 @@ if (cmd.command.length === 0) {
 
 // Commands given (new, help, etc)
 else {
-
     // If the command typed in doesn't exist, show the help screen
     if (!(cmd.command[0] in foundation)) {
         term.red(cmd.command[0])(" is not a defined command.\n\n");
