@@ -6,7 +6,6 @@ var update     = require('update-notifier');
 var pkg        = require('../package.json');
 var foundation = require('../lib');
 
-
 // Options that can be passed to commands
 var options = {
   "version": Boolean,
@@ -59,10 +58,11 @@ else {
   // If the command typed in doesn't exist, show the help screen
   if (!(cmd.command[0] in foundation)) {
     term.red(cmd.command[0])(" is not a defined command.\n\n");
-    foundation.help(false);
+    foundation.help();
   }
   // Otherwise, just run it already!
   else {
+    console.log(cmd.command[0]);
     // Every command function is passed secondary commands, and options
     // So if the user types "foundation new myApp --edge", "myApp" is a secondary command, and "--edge" is an option
     // use loop in the future to handle multiple commands
