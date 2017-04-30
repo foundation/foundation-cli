@@ -45,7 +45,6 @@ if (cmd.command.length === 0) {
   // If -v or --version was passed, show the version of the CLI
   if (cmd.opts.version) {
     term("Foundation CLI version " + require('../package.json').version + "\n");
-
   }
   // Otherwise, just show the help screen
   else {
