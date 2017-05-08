@@ -3,7 +3,6 @@
 var term = require( 'terminal-kit' ).terminal;
 var update     = require('update-notifier');
 var pkg        = require('../package.json');
-//var foundation = require('../lib');
 
 var argv = require('yargs')
     .strict(true)
@@ -29,25 +28,6 @@ var argv = require('yargs')
         process.exit(1)
     })
 
-
-// /// / update
-// //     .command('update', 'Update an existing Foundation project')
-
-// // // watch
-// //     .command('watch', 'Watch a project\'s files for changes')
-
-// // // build
-// //     .command('build', 'Build a project\'s files for production')
-
-// // // blocks
-// //     .command('blocks', 'List and install building blocks')
-
-// // // kits
-// //     .command('kits', 'List and install building block kits')
-
-// // epilogue
-//
-// ;
 argv.argv;
 
 
