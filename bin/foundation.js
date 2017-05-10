@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+require('colors');
 var nopt       = require('nopt');
 var update     = require('update-notifier');
 var pkg        = require('../package.json');
