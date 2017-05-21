@@ -51,6 +51,10 @@
     "blocks": {
       "base": "/building-blocks/files/building-blocks/",
       "JSON": "/building-blocks/data/building-blocks.json"
+    },
+    "kits": {
+      "base": "/building-blocks/files/kits/",
+      "JSON": "/building-blocks/data/kits.json"
     }
   }
 }
