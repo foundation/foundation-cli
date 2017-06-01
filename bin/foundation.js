@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var term = require( 'terminal-kit' ).terminal;
+var term       = require('terminal-kit').terminal;
 var update     = require('update-notifier');
 var pkg        = require('../package.json');
 
@@ -9,12 +9,13 @@ var argv = require('yargs')
     .usage("$0 <command> [options]")
 // // sources
     .commandDir('../lib/commands',{
-        include: '/^[\w\-]+\.js$/'
+        include: '/^[\w\-]+\.js$/',
     })
-    .help('help')
-    .option('help',{
+    .help()
+    .option('help', {
         alias: 'h',
         global: false,
+	default: true
     })
     .version()
     .option('version',{
@@ -22,13 +23,12 @@ var argv = require('yargs')
         global: false
     })
     .epilogue('Need more help? Ask a question on the Foundation Forum: ' + 'https://foundation.zurb.com/forum')
-    .fail(function (msg, err, yargs) {
-        term.red.error(msg+"\n\n")
-        term(yargs.help())
-        process.exit(1)
-    })
+    // .fail(function (msg, err, yargs) {
+    //     term.red.error(msg+"\n\n")
+    //     term(yargs.help())
+    //     process.exit(1)
+    // })
 
 argv.argv;
-
 
 //notifier.notify();
