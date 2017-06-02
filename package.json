@@ -57,6 +57,10 @@
       },
       "apps": "https://github.com/zurb/foundation-apps-template.git",
       "emails": "https://github.com/zurb/foundation-emails-template.git"
-    }
+    },
+      "manifests": {
+	  "blocks": "/building-blocks/data/building-blocks.json",
+	  "kits":  "/building-blocks/data/kits.json"
+      }
   }
 }

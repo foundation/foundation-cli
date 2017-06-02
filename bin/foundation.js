@@ -11,6 +11,7 @@ var argv = require('yargs')
     .commandDir('../lib/commands',{
         include: '/^[\w\-]+\.js$/',
     })
+    .recommendCommands(true)
     .help()
     .option('help', {
         alias: 'h',
@@ -23,11 +24,11 @@ var argv = require('yargs')
         global: false
     })
     .epilogue('Need more help? Ask a question on the Foundation Forum: ' + 'https://foundation.zurb.com/forum')
-    // .fail(function (msg, err, yargs) {
-    //     term.red.error(msg+"\n\n")
-    //     term(yargs.help())
-    //     process.exit(1)
-    // })
+    .fail(function (msg, err, yargs) {
+        term.red.error(msg+"\n\n")
+        term(yargs.help())
+        process.exit(1)
+    })
 
 argv.argv;
 
