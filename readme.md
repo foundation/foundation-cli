@@ -1,10 +1,15 @@
 # Foundation CLI
 
-This is the command-line interface for [Foundation](http://foundation.zurb.com) family of frameworks.. It downloads and installs blank templates in any of the three Foundation frameworks:
+This is the command-line interface for [Foundation](http://foundation.zurb.com) family of frameworks. It downloads and installs blank templates in any of the three Foundation frameworks:
 
 - [Foundation for Sites](http://foundation.zurb.com/sites), a framework for responsive websites.
 - [Foundation for Apps](http://foundation.zurb.com/apps), a framework for responsive web apps.
 - [Foundation for Emails](http://foundation.zurb.com/emails), a framework for responsive email.
+
+Additionally, the `foundation-cli` downloads and installs Foundation Building-Blocks and Kits.
+
+- [Foundation Building-Blocks](http://foundation.zurb.com/building-blocks/)
+- [Foundation Kits](http://foundation.zurb.com/building-blocks/kits.html)
 
 ## Requirements
 
@@ -48,6 +53,27 @@ Starts the setup process for a new Foundation project. The CLI will ask you whic
 ```bash
 foundation new
 ```
+
+### Blocks
+
+List available Building-Blocks or install one of your choice.
+
+```bash
+foundation blocks <list|install block>
+```
+
+Note:
+A Building-Block may be installed by referring to it by name -- e.g.: 'card-product-hover' -- or by its index number.
+
+
+### Kits
+
+List available Kits or install one of your choice. Kits comprise a set of Building-Blocks.
+
+```bash
+foundation kits <list|install kit>
+```
+
 
 ### Watch
 
