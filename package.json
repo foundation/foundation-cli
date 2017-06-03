@@ -48,15 +48,13 @@
   },
   "license": "MIT",
   "foundationRepos": {
-    "framework": {
-      "sites": {
-        "template": {
-          "basic": "https://github.com/zurb/foundation-sites-template.git",
-          "zurb": "https://github.com/zurb/foundation-zurb-template.git"
-        }
-      },
-      "apps": "https://github.com/zurb/foundation-apps-template.git",
-      "emails": "https://github.com/zurb/foundation-emails-template.git"
+    "frameworks": {
+	"sites": {
+            "basic": "https://github.com/zurb/foundation-sites-template.git",
+            "zurb": "https://github.com/zurb/foundation-zurb-template.git"
+	},
+	"apps": "https://github.com/zurb/foundation-apps-template.git",
+	"emails":  "https://github.com/zurb/foundation-emails-template.git"
     },
       "manifests": {
 	  "blocks": "/building-blocks/data/building-blocks.json",
