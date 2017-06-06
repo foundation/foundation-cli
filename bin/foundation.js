@@ -13,6 +13,7 @@ var argv = require('yargs')
         include: '/^[\w\-]+\.js$/',
     })
     .recommendCommands(true)
+
     .help()
     .option('help', {
         alias: 'h',
@@ -30,6 +31,12 @@ var argv = require('yargs')
         term(yargs.help())
         process.exit(1)
     })
+
+argv
+    .updateStrings({'Commands:': chalk.underline('Commands')+":",
+                    'Options:': chalk.underline('Options')+":"
+                   });
+
 
 argv.argv;
 
