@@ -3,10 +3,11 @@
 var term       = require('terminal-kit').terminal;
 var update     = require('update-notifier');
 var pkg        = require('../package.json');
+var chalk      = require('chalk');
 
 var argv = require('yargs')
     .strict(true)
-    .usage("$0 <command> [options]")
+    .usage(chalk.underline("Usage") + ":\n" + chalk.cyan("$0 <command> [options]"))
 // // sources
     .commandDir('../lib/commands',{
         include: '/^[\w\-]+\.js$/',
@@ -23,7 +24,7 @@ var argv = require('yargs')
         alias: 'v',
         global: false
     })
-    .epilogue('Need more help? Ask a question on the Foundation Forum: ' + 'https://foundation.zurb.com/forum')
+    .epilogue('Need more help? Ask a question on the Foundation Forum: ' + chalk.cyan('https://foundation.zurb.com/forum'))
     .fail(function (msg, err, yargs) {
         term.red.error(msg+"\n\n")
         term(yargs.help())
