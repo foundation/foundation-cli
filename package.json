@@ -1,6 +1,6 @@
 {
   "name": "foundation-cli",
-  "version": "2.2.1",
+  "version": "2.2.3",
   "description": "Command-line interface for the Foundation family of frameworks.",
   "keywords": [
     "foundation",
@@ -28,6 +28,7 @@
     "rimraf": "^2.2.8",
     "semver": "^4.3.0",
     "string-length": "^1.0.0",
+    "terminal-kit": "^1.8.7",
     "update-notifier": "^0.2.2",
     "which": "^1.0.8",
     "yargs": "^8.0.1"
@@ -60,6 +61,10 @@
     "manifests": {
       "blocks": "/building-blocks/data/building-blocks.json",
       "kits": "/building-blocks/data/kits.json"
+    },
+    "devDependencies": {
+      "editorconfig": "^0.13.2",
+      "eslint": "^3.19.0"
     }
   }
 }
