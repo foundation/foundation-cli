@@ -1,6 +1,6 @@
 {
   "name": "tbg-foundation-cli",
-  "version": "2.1.0",
+  "version": "2.2.3",
   "description": "TBG fork of the command-line interface for the Foundation family of frameworks",
   "keywords": [
     "foundation",
@@ -16,11 +16,13 @@
     "tbg-foundation": "./bin/foundation.js"
   },
   "dependencies": {
-    "async": "^0.9.0",
+    "async": "^2.3.0",
     "bower": "^1.6.8",
     "colors": "^1.0.3",
     "inquirer": "^0.8.3",
     "is-root": "^1.0.0",
+    "js-yaml": "^3.8.2",
+    "lodash": "^4.17.4",
     "multiline": "^1.0.2",
     "nopt": "^3.0.1",
     "npm": "^2.1.12",
@@ -28,6 +30,7 @@
     "rimraf": "^2.2.8",
     "semver": "^4.3.0",
     "string-length": "^1.0.0",
+    "terminal-kit": "^1.8.7",
     "update-notifier": "^0.2.2",
     "which": "^1.0.8"
   },
@@ -46,5 +49,9 @@
   "engines": {
     "node": ">=0.10.33"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "editorconfig": "^0.13.2",
+    "eslint": "^3.19.0"
+  }
 }

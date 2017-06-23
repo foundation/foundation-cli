@@ -51,7 +51,7 @@ if (typeof cmd.args[0] === 'undefined') {
 // Arguments given
 else {
   // If the command typed in doesn't exist, show the help screen
-  if (typeof foundation[cmd.args[0]] == 'undefined') {
+  if (typeof foundation[cmd.args[0]] === 'undefined') {
     foundation.help();
   }
   // Otherwise, just run it already!
