@@ -1,10 +1,10 @@
 # Foundation CLI
 
-This is the command-line interface for [Foundation](https://foundation.zurb.com) family of frameworks.. It downloads and installs blank templates in any of the three Foundation frameworks:
+This is the command-line interface for [Foundation](https://foundation.zurb.com) family of frameworks. It downloads and installs blank templates in any of the three Foundation frameworks:
 
-- [Foundation for Sites](https://foundation.zurb.com/sites), a framework for responsive websites.
-- [Foundation for Apps](https://foundation.zurb.com/apps), a framework for responsive web apps.
-- [Foundation for Emails](https://foundation.zurb.com/emails), a framework for responsive email.
+- [Foundation for Sites](https://foundation.zurb.com/sites), a framework for responsive websites
+- [Foundation for Apps](https://foundation.zurb.com/apps), a framework for responsive web apps ([deprecated](https://github.com/zurb/foundation-apps#deprecation-notice))
+- [Foundation for Emails](https://foundation.zurb.com/emails), a framework for responsive email
 
 ## Requirements
 
@@ -76,7 +76,7 @@ foundation build
 
 ### Update
 
-Updates your Bower packages, which includes Foundation. Run this command when you want to update an existing project to the newest version of Foundation.
+Updates your Bower packages, which includes Foundation. Run this command if you're using Bower instead of NPM or Yarn and you want to update an existing project to the newest version of Foundation.
 
 ```bash
 foundation update
