@@ -1,10 +1,10 @@
 # Foundation CLI
 
-This is the command-line interface for [Foundation](https://foundation.zurb.com) family of frameworks. It downloads and installs blank templates in any of the three Foundation frameworks:
+This is the command-line interface for [Foundation](https://get.foundation) family of frameworks. It downloads and installs blank templates in any of the three Foundation frameworks:
 
-- [Foundation for Sites](https://foundation.zurb.com/sites), a framework for responsive websites
-- [Foundation for Apps](https://foundation.zurb.com/apps), a framework for responsive web apps ([deprecated](https://github.com/zurb/foundation-apps#deprecation-notice))
-- [Foundation for Emails](https://foundation.zurb.com/emails), a framework for responsive email
+- [Foundation for Sites](https://get.foundation/sites), a framework for responsive websites
+- [Foundation for Apps](https://get.foundation/apps), a framework for responsive web apps ([deprecated](https://github.com/zurb/foundation-apps#deprecation-notice))
+- [Foundation for Emails](https://get.foundation/emails), a framework for responsive email
 
 ## Requirements
 
