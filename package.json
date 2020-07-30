@@ -1,13 +1,13 @@
 {
   "name": "foundation-cli",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "Command-line interface for the Foundation family of frameworks.",
   "keywords": [
     "foundation",
     "cli",
     "scaffold"
   ],
-  "author": "ZURB <foundation@zurb.com> (https://zurb.com)",
+  "author": "Foundation <contact@get.foundation> (https://get.foundation)",
   "main": "lib/index.js",
   "bin": {
     "foundation": "./bin/foundation.js"
