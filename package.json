@@ -40,7 +40,11 @@
     "url": "https://github.com/foundation/foundation-cli/issues"
   },
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "test": "node bin/foundation.js new"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   },
   "preferGlobal": true,
   "engines": {
