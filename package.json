@@ -1,6 +1,6 @@
 {
   "name": "foundation-cli",
-  "version": "2.2.6",
+  "version": "2.3.0",
   "description": "Command-line interface for the Foundation family of frameworks.",
   "keywords": [
     "foundation",
@@ -13,23 +13,22 @@
     "foundation": "./bin/foundation.js"
   },
   "dependencies": {
-    "async": "^2.3.0",
-    "bower": "^1.6.8",
-    "colors": "^1.0.3",
-    "inquirer": "^0.8.3",
-    "is-root": "^1.0.0",
-    "js-yaml": "^3.8.2",
-    "lodash": "^4.17.4",
+    "async": "^3.2.1",
+    "colors": "^1.4.0",
+    "inquirer": "^8.1.5",
+    "is-root": "^2.1.0",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
     "multiline": "^1.0.2",
-    "nopt": "^3.0.1",
-    "npm": "^2.1.12",
-    "paint-by-number": "1.0.0",
-    "rimraf": "^2.2.8",
-    "semver": "^4.3.0",
-    "string-length": "^1.0.0",
-    "terminal-kit": "^1.8.7",
-    "update-notifier": "^0.2.2",
-    "which": "^1.0.8"
+    "nopt": "^5.0.0",
+    "npm": "^7.24.0",
+    "paint-by-number": "2.0.0",
+    "rimraf": "^3.0.2",
+    "semver": "^7.3.5",
+    "string-length": "^4.0.2",
+    "terminal-kit": "^2.1.6",
+    "update-notifier": "^5.1.0",
+    "which": "^2.0.2"
   },
   "homepage": "https://get.foundation",
   "repository": {
@@ -44,11 +43,11 @@
   },
   "preferGlobal": true,
   "engines": {
-    "node": ">=4.0"
+    "node": ">=12.0"
   },
   "license": "MIT",
   "devDependencies": {
-    "editorconfig": "^0.13.2",
-    "eslint": "^3.19.0"
+    "editorconfig": "^0.15.3",
+    "eslint": "^8.1.0"
   }
 }
