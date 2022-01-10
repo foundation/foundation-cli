@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "async": "^3.2.1",
-    "colors": "^1.4.0",
+    "colors": "1.4.0",
     "inquirer": "^8.1.5",
     "is-root": "^2.1.0",
     "js-yaml": "^4.1.0",
