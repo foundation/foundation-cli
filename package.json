@@ -35,6 +35,9 @@
     "type": "git",
     "url": "https://github.com/foundation/foundation-cli"
   },
+  "resolutions": {
+    "colors": "1.4.0"
+  },
   "bugs": {
     "url": "https://github.com/foundation/foundation-cli/issues"
   },
